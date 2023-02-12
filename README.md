@@ -7,4 +7,5 @@ Random Python projects for fun
 
 Random themed Python code chonks
   - dictionaries.py
+  - functions.py
   - sets.py
