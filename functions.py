@@ -80,3 +80,12 @@ def list_manipulation(a_list, command, location, value=None):
 def is_palindrome(string):
     """Classic palindrome function"""
     return string == string[::-1]
+
+
+def intersection(list_1, list_2):
+    """Example function returns the intersection of two lists"""
+    return [element for element in list_1 if element in list_2]
+
+def intersection(list_1, list_2):
+    """Exampke function uses sets to return the intersection of two lists."""
+    return [element for element in set(list_1) & set(list_2)]
