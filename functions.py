@@ -76,3 +76,7 @@ def list_manipulation(a_list, command, location, value=None):
 # list_manipulation([1,2,3], "add", "beginning", 20) #  [20,1,2,3]
 # list_manipulation([1,2,3], "add", "end", 30) #  [1,2,3,30]
 
+
+def is_palindrome(string):
+    """Classic palindrome function"""
+    return string == string[::-1]
