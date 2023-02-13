@@ -53,7 +53,26 @@ print(outer.__doc__)
 
 # flesh out multiple_letter count:
 def multiple_letter_count(string):
+    """Example function that returns a dictionary of letters counted in a string"""
     return {letter: string.count(letter) for letter in string}
 
 # multiple_letter_count("awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
+
+
+def list_manipulation(a_list, command, location, value=None):
+    """Example function for removing items from different parts of a list"""
+    if (command=="remove" and location=="end"):
+        return a_list.pop()
+    elif (command=="remove" and location=="beginning"):
+        return a_list.pop(0)
+    elif (command=="add" and location=="beginning"):
+        a_list.insert(0, value)
+    elif (command=="add" and location=="end"):
+        a_list.append(value)
+    return a_list
+
+# list_manipulation([1,2,3], "remove", "end") # 3
+# list_manipulation([1,2,3], "remove", "beginning") #  1
+# list_manipulation([1,2,3], "add", "beginning", 20) #  [20,1,2,3]
+# list_manipulation([1,2,3], "add", "end", 30) #  [1,2,3,30]
 
