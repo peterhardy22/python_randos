@@ -52,14 +52,14 @@ print(outer.__doc__)
 
 
 # flesh out multiple_letter count:
-def multiple_letter_count(string):
+def multiple_letter_count(string: str) -> dict:
     """Example function that returns a dictionary of letters counted in a string"""
     return {letter: string.count(letter) for letter in string}
 
 # multiple_letter_count("awesome") # {'a': 1, 'e': 2, 'm': 1, 'o': 1, 's': 1, 'w': 1}
 
 
-def list_manipulation(a_list, command, location, value=None):
+def list_manipulation(a_list: list, command: str, location: str, value: int=None) -> list:
     """Example function for removing items from different parts of a list"""
     if (command=="remove" and location=="end"):
         return a_list.pop()
@@ -77,15 +77,15 @@ def list_manipulation(a_list, command, location, value=None):
 # list_manipulation([1,2,3], "add", "end", 30) #  [1,2,3,30]
 
 
-def is_palindrome(string):
+def is_palindrome(string: str) -> bool:
     """Classic palindrome function"""
     return string == string[::-1]
 
 
-def intersection(list_1, list_2):
+def intersection(list_1: list, list_2: list) -> list:
     """Example function returns the intersection of two lists"""
     return [element for element in list_1 if element in list_2]
 
-def intersection(list_1, list_2):
+def intersection(list_1: list, list_2: list) -> list:
     """Exampke function uses sets to return the intersection of two lists."""
     return [element for element in set(list_1) & set(list_2)]
