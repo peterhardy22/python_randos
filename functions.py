@@ -89,3 +89,12 @@ def intersection(list_1: list, list_2: list) -> list:
 def intersection(list_1: list, list_2: list) -> list:
     """Exampke function uses sets to return the intersection of 2 lists."""
     return [element for element in set(list_1) & set(list_2)]
+
+
+def combine_words(word: str, **kwargs: dict) -> str:
+    if 'prefix' in kwargs:
+        return kwargs['prefix'] + word
+    elif 'suffix' in kwargs:
+        return word + kwargs['suffix']
+
+    return word
