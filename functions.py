@@ -87,5 +87,5 @@ def intersection(list_1: list, list_2: list) -> list:
     return [element for element in list_1 if element in list_2]
 
 def intersection(list_1: list, list_2: list) -> list:
-    """Exampke function uses sets to return the intersection of two lists."""
+    """Exampke function uses sets to return the intersection of 2 lists."""
     return [element for element in set(list_1) & set(list_2)]
