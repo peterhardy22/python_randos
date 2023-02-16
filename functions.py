@@ -92,6 +92,7 @@ def intersection(list_1: list, list_2: list) -> list:
 
 
 def combine_words(word: str, **kwargs: dict) -> str:
+    """Example function that uses a paramter and kwargs"""
     if 'prefix' in kwargs:
         return kwargs['prefix'] + word
     elif 'suffix' in kwargs:
@@ -100,7 +101,8 @@ def combine_words(word: str, **kwargs: dict) -> str:
     return word
 
 
-def unpacking(*args: tuple) -> int:
+def unpacking_tuples(*args: tuple) -> int:
+    """Example function to display tuple unpacking by use of the * before the argument"""
     total: int = 0
     for num in args:
         total += num
@@ -108,8 +110,10 @@ def unpacking(*args: tuple) -> int:
     return total
 
 # nums: list = [1, 2, 3, 4, 5, 6]
-# unpacking(nums) #=> ([1, 2, 3, 4, 5, 6],) and errors out
-# unpacking(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
+# unpacking_tuples(nums) #=> ([1, 2, 3, 4, 5, 6],) and errors out
+# unpacking_tuples(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
 # nums: tuple = (1, 2, 3, 4, 5, 6)
-# unpacking(nums) #=> ((1, 2, 3, 4, 5, 6),) and errors out
-# unpacking(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
+# unpacking_tuples(nums) #=> ((1, 2, 3, 4, 5, 6),) and errors out
+# unpacking_tuples(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
+
+
