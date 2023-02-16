@@ -1,7 +1,7 @@
 # python_randos
-## Random Python projects for fun
+## Random Python projects for fun.
 
-### Working in python_classes_branch branch currently
+### Back to working in main branch.
 
   1. Rock, Paper, Scissors
   2. Guessing Game
