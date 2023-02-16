@@ -98,3 +98,18 @@ def combine_words(word: str, **kwargs: dict) -> str:
         return word + kwargs['suffix']
 
     return word
+
+
+def unpacking(*args: tuple) -> int:
+    total: int = 0
+    for num in args:
+        total += num
+    
+    return total
+
+# nums: list = [1, 2, 3, 4, 5, 6]
+# unpacking(nums) #=> ([1, 2, 3, 4, 5, 6],) and errors out
+# unpacking(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
+# nums: tuple = (1, 2, 3, 4, 5, 6)
+# unpacking(nums) #=> ((1, 2, 3, 4, 5, 6),) and errors out
+# unpacking(*nums) #=> (1, 2, 3, 4, 5, 6) runs correct
