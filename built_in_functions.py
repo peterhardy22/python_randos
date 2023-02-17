@@ -12,6 +12,10 @@ def decrement_list(numbers: list) -> list:
 # Combing Map and Filter.
 names: list = ["Peter", "Cassie", "Mickie", "Josie"]
 
-example = list(map(lambda name: f"Your friend today is {name}",
+example: list = list(map(lambda name: f"Your friend today is {name}",
             filter(lambda value: len(value) < 6, names)))
 # print(example)
+
+
+def remove_negatives(numbers: list) -> list:
+    return list(filter(lambda number: number >= 0, numbers))
