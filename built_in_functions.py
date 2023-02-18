@@ -23,4 +23,5 @@ def remove_negatives(numbers: list) -> list:
 
 # All and Any.
 def is_all_strings(items) -> bool:
+    """Example function determines whether all items in the iterable passed are strings."""
     return all(type(item) == str for item in items)
