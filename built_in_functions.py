@@ -25,3 +25,8 @@ def remove_negatives(numbers: list) -> list:
 def is_all_strings(items) -> bool:
     """Example function determines whether all items in the iterable passed are strings."""
     return all(type(item) == str for item in items)
+
+
+# Max and Abs
+def max_magnitude(numbers) -> int:
+    return max(abs(number) for number in numbers)
