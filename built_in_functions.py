@@ -36,4 +36,9 @@ def max_magnitude(numbers) -> int:
 # Sum.
 def sum_even_values(*args) -> int:
     """Example function using sum to return total of all even numbers passed."""
-    return sum(number for number in args if number % 2 == 0)
+    return sum(arg for arg in args if arg % 2 == 0)
+
+
+def sum_floats(*args) -> float:
+    """Takes in any argument and returns only the sum of float data types."""
+    return sum(arg for arg in args if type(arg) == float)
