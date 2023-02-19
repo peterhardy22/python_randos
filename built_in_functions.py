@@ -27,6 +27,13 @@ def is_all_strings(items) -> bool:
     return all(type(item) == str for item in items)
 
 
-# Max and Abs
+# Max and Abs.
 def max_magnitude(numbers) -> int:
+    """Example function using max to pick out largest int in a list."""
     return max(abs(number) for number in numbers)
+
+
+# Sum.
+def sum_even_values(*args) -> int:
+    """Example function using sum to return total of all even numbers passed."""
+    return sum(number for number in args if number % 2 == 0)
