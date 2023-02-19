@@ -12,8 +12,12 @@ def decrement_list(numbers: list) -> list:
 # Combing Map and Filter.
 names: list = ["Peter", "Cassie", "Mickie", "Josie"]
 
-example: list = list(map(lambda name: f"Your friend today is {name}",
-            filter(lambda value: len(value) < 6, names)))
+example: list = list(
+                    map(
+                        lambda name: f"Your friend today is {name}",
+                        filter(lambda value: len(value) < 6, names)
+                    )
+                )
 # print(example)
 
 # Filter.
@@ -42,3 +46,8 @@ def sum_even_values(*args) -> int:
 def sum_floats(*args) -> float:
     """Takes in any argument and returns only the sum of float data types."""
     return sum(arg for arg in args if type(arg) == float)
+
+
+def interleave(string_1: str, string_2: str) -> str:
+    """Example function using zip to take in 2 strings and combine them into a single string."""
+    return "".join("".join(tup) for tup in zip(string_1, string_2))
