@@ -1,6 +1,7 @@
 from keyword import iskeyword
 
 def contains_keyword(*args: str) -> bool:
+    """Determines if the passed arguments are Python keywords."""
     for string in args:
         if iskeyword(string): return True
     return False
