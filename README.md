@@ -11,3 +11,5 @@ Random themed Python code chonks
   - dictionaries.py
   - functions.py
   - sets.py
+  - debugging.py
+  - built_in_functions.py
