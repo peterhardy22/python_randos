@@ -13,3 +13,6 @@ Random themed Python code chonks
   - sets.py
   - built_in_functions.py
   - debugging.py
+  - modules.py
+  - http.py
+  
