@@ -8,8 +8,15 @@ class User:
         User.active_users += 1
     
     @classmethod
-    def display_active_users(cls):
+    def display_active_users(cls: object) -> str:
+        """Returns count of current active users."""
         return f"There are currently {cls.active_users} active users."
+    
+    @classmethod
+    def from_string(cls: object, data_str: str) -> object:
+        """Takes in user data as a string and creates user."""
+        first, last, age = data_str.split(",")
+        return cls(first, last, int(age))
     
     def logout(self) -> str:
         """Subtracts a user from active_users."""
