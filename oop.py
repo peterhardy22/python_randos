@@ -56,3 +56,18 @@ class Pet:
             raise ValueError(f"You can't have a {species} pet!")
         self.species = species
         return f"This animals new species is {species}!"
+
+
+class Chicken:
+    total_eggs: int = 0
+    
+    def __init__(self, species: str, name: str, eggs: int = 0) -> None:
+        self.species: str = species
+        self.name: str = name
+        self.eggs: int = eggs
+        
+    def lay_egg(self) -> int:
+        """Keeps track of how many individual and collective eggs are being laid."""
+        self.eggs += 1
+        Chicken.total_eggs += 1
+        return self.eggs
