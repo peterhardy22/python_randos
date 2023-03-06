@@ -13,3 +13,20 @@ class User:
 user1 = User("Peter", "Hardy", 34)
 print(user1.full_name())
 print(user1.initials())
+
+
+# Define Bank Account Below:
+class BankAccount:
+    def __init__(self, owner: str, balance: float = 0.0) -> None:
+        self.owner: str = owner
+        self.balance: float = balance
+    
+    def deposit(self, amount: float) -> float:
+        """Adds provided amount to balance."""
+        self.balance += amount
+        return self.balance
+        
+    def withdraw(self, amount: float) -> float:
+        """Subtracts provided amount from balance."""
+        self.balance -= amount
+        return self.balance
