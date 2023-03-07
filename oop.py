@@ -7,6 +7,9 @@ class User:
         self.age = age
         User.active_users += 1
     
+    def __repr__(self) -> str:
+        return f"This is {self.first} {self.last}. They are {self.age} years old."
+    
     @classmethod
     def display_active_users(cls: object) -> str:
         """Returns count of current active users."""
