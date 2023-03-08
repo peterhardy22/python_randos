@@ -1,30 +1,30 @@
-# # Inheritance and super().
-# class Animal:
-#     def __init__(self, name: str, species: str) -> None:
-#         self.name: str = name
-#         self.species: str = species
+# Inheritance and super().
+class Animal:
+    def __init__(self, name: str, species: str) -> None:
+        self.name: str = name
+        self.species: str = species
     
-#     def __repr__(self) -> str:
-#         return f"{self.name} is a {self.species}."
+    def __repr__(self) -> str:
+        return f"{self.name} is a {self.species}."
 
-#     def make_sound(self, sound: str) -> str:
-#         """Returns the sound the animal makes based on the argument passed in."""
-#         print(f"This animal named {self.name} says {sound}!")
+    def make_sound(self, sound: str) -> str:
+        """Returns the sound the animal makes based on the argument passed in."""
+        print(f"This animal named {self.name} says {sound}!")
 
-# class Cat(Animal):
-#     def __init__(self, name: str, breed: str, toy: str) -> None:
-#         super().__init__(name, species="Cat")
-#         self.breed: str = breed
-#         self.toy: str = toy
+class Cat(Animal):
+    def __init__(self, name: str, breed: str, toy: str) -> None:
+        super().__init__(name, species="Cat")
+        self.breed: str = breed
+        self.toy: str = toy
     
-#     def play(self) -> str:
-#         print(f"{self.name} plays with {self.toy}!")
+    def play(self) -> str:
+        print(f"{self.name} plays with {self.toy}!")
 
 # # charlie = Cat("Charlie", "Russian Blue", "String")
 # # print(charlie)
 # # charlie.play()
 
-
+# Advanced Inheritance.
 class User:
     active_users: int = 0
 
@@ -78,8 +78,8 @@ class Moderator(User):
         """Alerts on who removed a post and from which community."""
         return f"{self.full_name()} removed a post from the {self.community} community."
 
-jasmine = Moderator("Jasmine", "O'Conner", 61, "Piano")
-johnny = User("Johnny", "Tsunami", 16)
-jimmy = User("Jimmy", "Butler", 30)
-print(User.display_active_users())
-print(Moderator.display_active_moderators)
+# jasmine = Moderator("Jasmine", "O'Conner", 61, "Piano")
+# johnny = User("Johnny", "Tsunami", 16)
+# jimmy = User("Jimmy", "Butler", 30)
+# print(User.display_active_users())
+# print(Moderator.display_active_moderators)
