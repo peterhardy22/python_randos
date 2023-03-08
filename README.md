@@ -5,7 +5,7 @@
 
   1. Rock, Paper, Scissors
   2. Guessing Game
-  3. ...
+  3. Deck of Cards
 
 Random themed Python code chonks
   - dictionaries.py
@@ -16,3 +16,4 @@ Random themed Python code chonks
   - modules.py
   - http.py
   - oop.py
+  - oop_2.py
