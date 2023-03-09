@@ -110,4 +110,19 @@ class Human:
         if isinstance(other_human, int):
             return [copy(self) for human in range(other_human)]
         return "You can't multiply that!"
+
+
+class GrumpyDict(dict):
+    def __repr__(self) -> dict:
+        print("None of your business!")
+        return super().__repr__()
+
+    def __missing__(self, key: str) -> None:
+        """Function used for when a key that is missing comes up."""
+        print(f"You want {key}? Well it ain't here!")
+
+    def __setitem__(self, key: str, value: str) -> dict:
+        print("You want to change the dictionary?!")
+        print("Ughhh... Fine...")
+        super().__setitem__(key, value)
     
