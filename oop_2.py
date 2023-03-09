@@ -83,3 +83,31 @@ class Moderator(User):
 # jimmy = User("Jimmy", "Butler", 30)
 # print(User.display_active_users())
 # print(Moderator.display_active_moderators)
+
+from copy import copy
+
+class Human:
+    def __init__(self, first: str, last: str, age: int) -> None:
+        self.first = first
+        self.last = last
+        self.age = age
+    
+    def __repr__(self) -> str:
+        return f"Human named {self.first} {self.last} that is aged {self.age} years old."
+    
+    def __len__(self) -> int:
+        """Returns the age (length) of the human."""
+        return self.age
+    
+    def __add__(self, other_human: object) -> int | str:
+        """Function for 2 humans to be added together to create a baby."""
+        if isinstance(other_human, Human):
+            return Human(first="Baby", last=self.last, age=0)
+        return "You can't add that with another human!"
+    
+    def __mul__(self, other_human: object) -> list:
+        """Allows humans to multiply!"""
+        if isinstance(other_human, int):
+            return [copy(self) for human in range(other_human)]
+        return "You can't multiply that!"
+    
