@@ -7,7 +7,7 @@
   2. Guessing Game
   3. Deck of Cards
 
-Random themed Python code chonks
+Randomly Themed Python Code Chonks
   - dictionaries.py
   - functions.py
   - sets.py
