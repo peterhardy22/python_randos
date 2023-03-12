@@ -30,3 +30,16 @@ def current_beat() -> int:
         if index >= len(numbers): index = 0
         yield numbers[index]
         index += 1
+
+
+def make_song(verses: int = 99, beverage: str = "soda") -> str:
+    """
+    99 Bottles song in code.
+    """
+    for number in range(verses, -1, -1):
+        if number > 1:
+            yield "{number} bottles of {beverage} on the wall."
+        elif number == 1:
+            yield "Only 1 bottle of {beverage} left!"
+        else:
+            yield "No more {beverage}!"
