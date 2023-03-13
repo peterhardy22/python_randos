@@ -61,7 +61,7 @@ def get_unlimited_multiples(number: int = 1) -> int:
     Returns an infinite amount of multiples for a given number.
     """
     next_number: int = number
-    while next_number:
+    while True:
         yield next_number
         next_number += number
 
