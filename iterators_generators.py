@@ -34,7 +34,7 @@ def current_beat() -> int:
 
 def make_song(verses: int = 99, beverage: str = "soda") -> str:
     """
-    99 Bottles song in code.
+    99 Bottles of {beverage} on the wall song in code.
     """
     for number in range(verses, -1, -1):
         if number > 1:
@@ -43,3 +43,14 @@ def make_song(verses: int = 99, beverage: str = "soda") -> str:
             yield "Only 1 bottle of {beverage} left!"
         else:
             yield "No more {beverage}!"
+
+
+def get_multiples(number: int = 1, count: int = 10) -> int:
+    """
+    Returns multiples of a number up to a certain amount of times.
+    """
+    next_number: int = number
+    while count > 0:
+        yield next_number
+        count -= 1
+        next_number += number
