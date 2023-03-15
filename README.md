@@ -17,3 +17,5 @@ Randomly Themed Python Code Chonks
   - http.py
   - oop.py
   - oop_2.py
+  - decorators.py
+  
