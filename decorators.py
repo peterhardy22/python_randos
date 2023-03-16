@@ -38,6 +38,35 @@ def add(x: int, y: int) -> int:
     """Adds two numbers together."""
     return x + y
 
-print(add.__doc__)
-print(add.__name__)
-help(add)
+# print(add.__doc__)
+# print(add.__name__)
+# help(add)
+
+
+# Let's define a speed_test decorator
+from functools import wraps
+from time import time
+
+def speed_test(func: function) -> str:
+	@wraps(func)
+	def wrapper(*args, **kwargs):
+		start_time = time()
+		result: int = func(*args, **kwargs)
+		end_time = time()
+		print(f"Executing {func.__name__}")
+		print(f"Time Elapsed: {end_time - start_time}")
+		return result
+	return wrapper
+
+@speed_test
+def sum_nums_gen() -> int:
+	return sum(x for x in range(90000000))
+
+@speed_test
+def sum_nums_list() -> int:
+	return sum([x for x in range(90000000)])
+
+
+print(sum_nums_gen())
+print(sum_nums_list())
+
