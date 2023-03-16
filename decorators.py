@@ -66,7 +66,21 @@ def sum_nums_gen() -> int:
 def sum_nums_list() -> int:
 	return sum([x for x in range(90000000)])
 
+# print(sum_nums_gen())
+# print(sum_nums_list())
 
-print(sum_nums_gen())
-print(sum_nums_list())
+ 
+def show_args(func) -> str:
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        print("Here are the args:", args)
+        print("Here are the kwargs:", kwargs)
+        return func(*args, **kwargs)
+    return wrapper
 
+
+@show_args
+def do_nothing(*args, **kwargs):
+    pass
+
+# do_nothing(1, 2, 3,a="hi",b="bye")
