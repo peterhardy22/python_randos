@@ -121,3 +121,18 @@ def only_ints(func: function):
 # add("1", "2") # "Please only invoke with integers."
 
 
+def ensure_authorized(func: function):
+    wraps(func)
+    def wrapper(*args, **kwargs: dict):
+        if kwargs.get("role") == "admin":
+            return func(*args, **kwargs)
+        return "Unauthorized"
+    return wrapper
+
+# @ensure_authorized
+# def show_secrets(*args, **kwargs):
+#     return "Shh! Don't tell anybody!"
+
+# show_secrets(role="admin") # "Shh! Don't tell anybody!"
+# show_secrets(role="nobody") # "Unauthorized"
+# show_secrets(a="b") # "Unauthorized"
