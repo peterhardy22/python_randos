@@ -87,7 +87,7 @@ def do_nothing(*args, **kwargs):
 
 
 def ensure_fewer_than_three_args(func: function):
-    wraps(func)
+    @wraps(func)
     def wrapper(*args, **kwargs):
         if len(args) < 3:
             return func(*args, **kwargs)
@@ -106,7 +106,7 @@ def ensure_fewer_than_three_args(func: function):
 
 
 def only_ints(func: function):
-    wraps(func)
+    @wraps(func)
     def wrapper(*args, **kwargs):
         if any([arg for arg in args if type(arg) != int]):
             return "Please only invoke with integers."
@@ -122,7 +122,7 @@ def only_ints(func: function):
 
 
 def ensure_authorized(func: function):
-    wraps(func)
+    @wraps(func)
     def wrapper(*args, **kwargs: dict):
         if kwargs.get("role") == "admin":
             return func(*args, **kwargs)
