@@ -104,3 +104,20 @@ def ensure_fewer_than_three_args(func: function):
 # add_all(1,2,3) # "Too many arguments!"
 # add_all(1,2,3,4,5,6) # "Too many arguments!"
 
+
+def only_ints(func: function):
+    wraps(func)
+    def wrapper(*args, **kwargs):
+        if any([arg for arg in args if type(arg) != int]):
+            return "Please only invoke with integers."
+        return func(*args, **kwargs)
+    return wrapper
+
+# @only_ints 
+# def add(x, y):
+#     return x + y
+    
+# add(1, 2) # 3
+# add("1", "2") # "Please only invoke with integers."
+
+
