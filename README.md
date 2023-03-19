@@ -19,4 +19,5 @@ Randomly Themed Python Code Chonks
   - oop_2.py
   - decorators.py
   - testing.py
+  - activities.py & tests.py
   
