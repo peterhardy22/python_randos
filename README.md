@@ -20,4 +20,5 @@ Randomly Themed Python Code Chonks
   - decorators.py
   - testing.py
   - activities.py & tests.py
+  - files.py
   
