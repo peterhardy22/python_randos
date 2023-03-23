@@ -5,3 +5,12 @@ def copy(file_name: str, new_file_name: str) -> None:
     
     with open(new_file_name, "w") as new_file:
         new_file.write(text)
+
+
+def copy_and_reverse(file_name: str, new_file_name: str) -> None:
+    """This function copies the contents of the first file and writes them into the second file in reverse."""
+    with open(file_name) as file:
+        text = file.read()
+ 
+    with open(new_file_name, "w") as new_file:
+        new_file.write(text[::-1])
