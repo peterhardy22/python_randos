@@ -9,6 +9,7 @@ add_user("Dwayne", "Johnson") # None
 # Dwayne,Johnson
 '''
 def add_user(first_name: str, last_name: str):
+    """This function takes in a first and last name, then writes it into the users.csv file."""
     with open("users.csv", "a") as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow([first_name, last_name])
