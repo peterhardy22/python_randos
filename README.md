@@ -6,6 +6,7 @@
   1. Rock, Paper, Scissors
   2. Guessing Game
   3. Deck of Cards
+  4. Quote Scraping
 
 Randomly Themed Python Code Chonks
   - dictionaries.py
