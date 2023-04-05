@@ -7,12 +7,14 @@ BASE_URL: str = "http://quotes.toscrape.com"
 
 
 def read_quotes(filename):
+    """This function reads the quotes from a csv file and returns them as a list."""
     with open(filename, "r") as file:
         csv_reader = DictReader(file)
         return list(csv_reader)
 
 
 def start_game(quotes: list):
+    """This function allows the user to guess who said a quote with a number of guesses and hints along the way."""
     quote: dict = choice(quotes)
     remaining_guesses: int = 4
     guess: str = ""
