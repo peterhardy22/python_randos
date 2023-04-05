@@ -8,6 +8,7 @@ BASE_URL: str = "http://quotes.toscrape.com"
 
 
 def scrape_quotes() -> list:
+    """This function scrapes quotes from a quote scraping website."""
     all_quotes: list = []
     url: str = "/page/1"
 
@@ -30,6 +31,7 @@ def scrape_quotes() -> list:
 
 
 def write_quotes(quotes: list):
+    """This function writes quotes to a csv file."""
     with open("quotes.csv", "w") as file:
         headers: list = ["text", "author", "bio-link"]
         csv_writer = DictWriter(file, filednames=headers) 
