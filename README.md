@@ -23,4 +23,5 @@ Randomly Themed Python Code Chonks
   - activities.py & tests.py
   - files.py
   - csv_work.py
+  - regex.py
   
