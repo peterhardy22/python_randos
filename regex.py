@@ -1,1 +1,3 @@
 # Email -> ^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-z0-9-.]+$
+
+# Regex examples to come...
