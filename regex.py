@@ -11,5 +11,9 @@ import re
 
 
 # Regex for a phone number.
-phone_pattern = re.compile(r'\d{3} \d{3}-\d{4}')
-result = phone_pattern.search('Call me at 415 555-4242!')
+phone_pattern = re.compile(r"\d{3} \d{3}-\d{4}")
+result = phone_pattern.search("Call me at 415 555-4242!")
+try:
+  print(result.group())
+except:
+  print("No phone number was found.")
