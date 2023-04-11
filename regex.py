@@ -33,10 +33,8 @@ def extract_phone(input: str) -> str:
 def extract_all_phones(input: str) -> list:
     """Extracts all phone numbers found in a string."""
     phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
-    match = phone_regex.findall(input)
-    if match:
-      return match.group()
-    return None
+    return phone_regex.findall(input)
+
 
 # def is_valid_phone():
     # """Checks if an entire string is a valid phone number."""
