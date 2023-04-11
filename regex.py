@@ -20,10 +20,20 @@ import re
 #   print("No phone number was found.")
 # print(result_2)
 
-def extract_phone(input: str):
+
+def extract_phone(input: str) -> str:
     """Extracts all phone numbers found in a string."""
     phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
     match = phone_regex.search(input)
+    if match:
+      return match.group()
+    return None
+
+
+def extract_all_phones(input: str) -> list:
+    """Extracts all phone numbers found in a string."""
+    phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
+    match = phone_regex.findall(input)
     if match:
       return match.group()
     return None
