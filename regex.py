@@ -20,10 +20,10 @@ import re
 #   print("No phone number was found.")
 # print(result_2)
 
+phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
 
 def extract_phone(input: str) -> str:
     """Extracts all phone numbers found in a string."""
-    phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
     match = phone_regex.search(input)
     if match:
       return match.group()
@@ -32,7 +32,6 @@ def extract_phone(input: str) -> str:
 
 def extract_all_phones(input: str) -> list:
     """Extracts all phone numbers found in a string."""
-    phone_regex = re.compile(r"\b\d{3} \d{3}-\d{4}\b")
     return phone_regex.findall(input)
 
 
@@ -42,4 +41,13 @@ def is_valid_phone(input: str) -> bool:
     match = phone_regex.fullmatch(input)
     if match:
       return True
+    return False
+
+
+def is_valid_time(input: str) -> bool:
+    """Determines if the input is formatted as a time."""
+    pattern = re.compile(r'^\d\d?:\d\d$')
+    match = pattern.search(input)
+    if match:
+        return True
     return False
