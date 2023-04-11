@@ -38,8 +38,8 @@ def extract_all_phones(input: str) -> list:
 
 def is_valid_phone(input: str) -> bool:
     """Checks if an entire string is a valid phone number."""
-    phone_regex = re.compile(r"^\d{3} \d{3}-\d{4}$")
-    match = phone_regex.search(input)
+    phone_regex = re.compile(r"\d{3} \d{3}-\d{4}")
+    match = phone_regex.fullmatch(input)
     if match:
       return True
     return False
