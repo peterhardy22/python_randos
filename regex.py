@@ -79,4 +79,17 @@ def parse_name(input: str) -> str:
     print(matches.group('first'))
     print(matches.group('last'))
 
-parse_name("Mrs. Tilda Swinton")
+# parse_name("Mrs. Tilda Swinton")
+
+ 
+def parse_date(input: str) -> dict:
+    """Function that checks if the input is a valid date format."""
+    pattern = re.compile("^(\d\d)[,/.](\d\d)[,/.](\d{4})$")
+    match: str = pattern.search(input)
+    if match:
+        return {
+            "d": match.group(1),
+            "m": match.group(2),
+            "y": match.group(3),
+        }
+    return None
