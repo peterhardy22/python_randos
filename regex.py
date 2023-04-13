@@ -69,3 +69,14 @@ def parse_bytes(input: str) -> list:
     binary_regex = re.compile(r'\b[10]{8}\b')
     results: list = binary_regex.findall(input)
     return results
+
+
+def parse_name(input: str) -> str:
+    """Function that takes in a name and parses first and last names."""
+    name_regex = re.compile(r'^(Mr\.|Mrs\.|Ms\.|Mdme\.) (?P<first>[A-Za-z]+) (?P<last>[A-Za-z]+)$')
+    matches = name_regex.search(input)
+    print(matches.group())
+    print(matches.group('first'))
+    print(matches.group('last'))
+
+parse_name("Mrs. Tilda Swinton")
