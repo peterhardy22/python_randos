@@ -93,3 +93,18 @@ def parse_date(input: str) -> dict:
             "y": match.group(3),
         }
     return None
+
+
+# Without Verbose Flag...
+# pat = re.compile(r'^([a-z0-9_\.-]+)@([0-9a-z\.-]+)\.([a-z\.]{2,6})$')
+pattern = re.compile(r"""
+	^([a-z0-9_\.-]+)	# first part of email.	
+	@					# single @ sign.
+	([0-9a-z\.-]+)		# email provider.
+	\.					# single period.
+	([a-z\.]{2,6})$		# com, org, net, etc.
+""", re.VERBOSE | re.IGNORECASE)
+
+match = pattern.search("PeteR123@Yahoo.com")
+print(match.group())
+print(match.groups())
