@@ -117,3 +117,10 @@ pattern = re.compile(r'(Mr.|Mrs.|Ms.) ([a-z])[a-z]+', re.I)
 # result: str = pattern.search(text).group()
 result = pattern.sub("\g<1> \g<2>", text)
 print(result)
+
+
+def censor(input: str) -> str:
+    """This function detects if frack is in a word and censors it."""
+    pattern = re.compile(r'\bfrack\w*\b', re.I)
+    result: str = pattern.sub("CENSORED", input)
+    return result
