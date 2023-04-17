@@ -105,6 +105,15 @@ pattern = re.compile(r"""
 	([a-z\.]{2,6})$		# com, org, net, etc.
 """, re.VERBOSE | re.IGNORECASE)
 
-match = pattern.search("PeteR123@Yahoo.com")
-print(match.group())
-print(match.groups())
+# match = pattern.search("PeteR123@Yahoo.com")
+# print(match.group())
+# print(match.groups())
+
+
+text: str = "Last night Mrs. Daisy and Mr. white murdered Ms. Chow"
+
+pattern = re.compile(r'(Mr.|Mrs.|Ms.) ([a-z])[a-z]+', re.I)
+# result: list = pattern.findall(text)
+# result: str = pattern.search(text).group()
+result = pattern.sub("\g<1> \g<2>", text)
+print(result)
