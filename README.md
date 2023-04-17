@@ -24,4 +24,5 @@ Randomly Themed Python Code Chonks
   - files.py
   - csv_work.py
   - regex.py
+  - sql.py
   
