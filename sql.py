@@ -7,9 +7,22 @@ cursor = conn.cursor()
 # Creates table.
 # cursor.execute("CREATE TABLE friends (first_name TEXT, last_name TEXT, closeness INTEGER);")
 
-insert_query = '''INSERT INTO friends 
-                    VALUES ('Harrison', 'George', 64)'''
-cursor.execute(insert_query)
+# insert_query = '''INSERT INTO friends 
+#                     VALUES ('Harrison', 'George', 64)'''
+# cursor.execute(insert_query)
+
+# BAD DONT DO THIS!
+# form_first = "Ringo"
+# query = f"INSERT INTO friends (first_name) VALUES ('{form_first}')"
+
+# form_first = "John"
+# query = f"INSERT INTO friends (first_name) VALUES (?)"
+# cursor.execute(query, (form_first,))
+
+data = ("Paul", "McCartney", 32)
+query = "INSERT INTO friends VALUES (?,?,?)"
+cursor.execute(query, data)
+
 conn.commit()
 conn.close()
 
