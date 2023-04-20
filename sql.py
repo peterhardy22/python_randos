@@ -19,9 +19,16 @@ cursor = conn.cursor()
 # query = f"INSERT INTO friends (first_name) VALUES (?)"
 # cursor.execute(query, (form_first,))
 
-data = ("Paul", "McCartney", 32)
-query = "INSERT INTO friends VALUES (?,?,?)"
-cursor.execute(query, data)
+# data = ("Paul", "McCartney", 32)
+# query = "INSERT INTO friends VALUES (?,?,?)"
+# cursor.execute(query, data)
+
+people = [
+    ("Roald", "Amundsen", 5),
+    ("Rosa", "Parks", 8),
+    ("Henry", "Hudson", 7),
+    ("Neil", "Armstrong", 7)]
+cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
 
 conn.commit()
 conn.close()
