@@ -23,12 +23,16 @@ cursor = conn.cursor()
 # query = "INSERT INTO friends VALUES (?,?,?)"
 # cursor.execute(query, data)
 
-people = [
-    ("Roald", "Amundsen", 5),
-    ("Rosa", "Parks", 8),
-    ("Henry", "Hudson", 7),
-    ("Neil", "Armstrong", 7)]
-cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
+# people = [
+#     ("Roald", "Amundsen", 5),
+#     ("Rosa", "Parks", 8),
+#     ("Henry", "Hudson", 7),
+#     ("Neil", "Armstrong", 7)]
+# cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
+
+cursor.execute("SELECT * FROM friends")
+for result in cursor:
+    print(result)
 
 conn.commit()
 conn.close()
