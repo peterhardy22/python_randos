@@ -31,8 +31,7 @@ cursor = conn.cursor()
 # cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
 
 cursor.execute("SELECT * FROM friends")
-for result in cursor:
-    print(result)
+print(cursor.fetchall())
 
 conn.commit()
 conn.close()
