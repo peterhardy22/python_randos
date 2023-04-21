@@ -30,8 +30,8 @@ cursor = conn.cursor()
 #     ("Neil", "Armstrong", 7)]
 # cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
 
-cursor.execute("SELECT * FROM friends")
-print(cursor.fetchall())
+cursor.execute("SELECT * FROM friends WHERE first_name IS 'Rosa'")
+print(cursor.fetchone())
 
 conn.commit()
 conn.close()
