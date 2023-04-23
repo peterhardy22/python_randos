@@ -1,8 +1,8 @@
 import sqlite3
 
 
-conn = sqlite3.connect("my_friends.db")
-cursor = conn.cursor()
+# conn = sqlite3.connect("my_friends.db")
+# cursor = conn.cursor()
 
 # Creates table.
 # cursor.execute("CREATE TABLE friends (first_name TEXT, last_name TEXT, closeness INTEGER);")
@@ -30,11 +30,11 @@ cursor = conn.cursor()
 #     ("Neil", "Armstrong", 7)]
 # cursor.executemany("INSERT INTO friends VALUES (?,?,?)", people)
 
-cursor.execute("SELECT * FROM friends WHERE first_name IS 'Rosa'")
-print(cursor.fetchone())
+# `cursor.execute("SELECT * FROM friends WHERE first_name IS 'Rosa'")
+# print(cursor.fetchone())`
 
-conn.commit()
-conn.close()
+# conn.commit()
+# conn.close()
 
 
 # sqlite3 {database.db}
@@ -42,3 +42,12 @@ conn.close()
 # .schema
 # select * from table;
 # .quit
+
+
+conn = sqlite3.connect("users.db")
+cursor = conn.cursor()
+
+
+
+conn.commit()
+conn.close()
