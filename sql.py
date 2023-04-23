@@ -59,6 +59,7 @@ u_name: str = input("Please enter your username: ")
 p_word: str = input("Please enter your password: ")
 
 query = f"SELECT * FROM users WHERE username = '{u_name}' AND password = '{p_word}'"
+      #  "SELECT * FROM users WHERE username = 'Pedro' AND password = '' OR 1=1 --'" -> SQL injection that is always TRUE.
 cursor.execute(query)
 
 result = cursor.fetchone()
