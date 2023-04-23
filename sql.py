@@ -47,6 +47,9 @@ import sqlite3
 conn = sqlite3.connect("users.db")
 cursor = conn.cursor()
 
+# query = "CREATE TABLE users (username TEXT, password TEST)"
+# cursor.execute(query)
+
 
 
 conn.commit()
