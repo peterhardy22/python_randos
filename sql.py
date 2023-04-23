@@ -1,6 +1,5 @@
 import sqlite3
 
-
 # conn = sqlite3.connect("my_friends.db")
 # cursor = conn.cursor()
 
@@ -47,10 +46,26 @@ import sqlite3
 conn = sqlite3.connect("users.db")
 cursor = conn.cursor()
 
+# Set up users table and create test users.
 # query = "CREATE TABLE users (username TEXT, password TEST)"
 # cursor.execute(query)
+# users_list: list = [
+#     ("Pedro","dn823wfndjfSDF"),
+#     ("Cdub", "hf42MVC:?weh@>2"),
+#     ("JaMickie", "shimmytutu")
+# ]
+# cursor.executemany("INSERT INTO users VALUES (?,?)", users_list)
+u_name: str = input("Please enter your username: ")
+p_word: str = input("Please enter your password: ")
 
+query = f"SELECT * FROM users WHERE username = '{u_name}' AND password = '{p_word}'"
+cursor.execute(query)
 
+result = cursor.fetchone()
+if(result):
+    print("WELCOME BACK")
+else:
+    print("FAILED LOGIN")
 
 conn.commit()
 conn.close()
