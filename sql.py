@@ -18,11 +18,11 @@ import sqlite3
 # query = f"INSERT INTO friends (first_name) VALUES (?)"
 # cursor.execute(query, (form_first,))
 
-# data = ("Paul", "McCartney", 32)
-# query = "INSERT INTO friends VALUES (?,?,?)"
+# data: tuple(str, str, int) = ("Paul", "McCartney", 32)
+# query: str = "INSERT INTO friends VALUES (?,?,?)"
 # cursor.execute(query, data)
 
-# people = [
+# people: list[(str, str, int)] = [
 #     ("Roald", "Amundsen", 5),
 #     ("Rosa", "Parks", 8),
 #     ("Henry", "Hudson", 7),
@@ -49,7 +49,7 @@ cursor = conn.cursor()
 # Set up users table and create test users.
 # query = "CREATE TABLE users (username TEXT, password TEST)"
 # cursor.execute(query)
-# users_list: list = [
+# users_list: list[(str, str    q)] = [
 #     ("Pedro","dn823wfndjfSDF"),
 #     ("Cdub", "hf42MVC:?weh@>2"),
 #     ("JaMickie", "shimmytutu")
