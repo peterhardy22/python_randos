@@ -25,4 +25,6 @@ Randomly Themed Python Code Chonks
   - csv_work.py
   - regex.py
   - sql.py
+
+  - extra_challenges.py
   
