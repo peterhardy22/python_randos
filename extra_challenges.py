@@ -29,3 +29,19 @@ remove_every_other([1]) # [1]
 def remove_every_other(input_list: list) -> list:
     """Returns the given lists' even number indexed items."""
     return [number for index, number in enumerate(input_list) if index % 2 == 0]
+
+
+'''
+sum_pairs([4,2,10,5,1], 6) # [4,2]
+sum_pairs([11,20,4,2,1,5], 100) # []
+'''
+        
+def sum_pairs(numbers_list: list, number: int) -> list:
+    already_visited: set = set()
+    for additive in numbers_list:
+        difference: int = number - additive
+        if difference in already_visited:
+            return [difference, additive]
+        already_visited.add(additive)
+    return []
+        
