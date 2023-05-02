@@ -44,4 +44,14 @@ def sum_pairs(numbers_list: list, number: int) -> list:
             return [difference, additive]
         already_visited.add(additive)
     return []
-        
+
+
+'''
+vowel_count('awesome') # {'a': 1, 'e': 2, 'o': 1}
+vowel_count('Elie') # {'e': 2, 'i': 1}
+vowel_count('Colt') # {'o': 1}
+'''
+
+def vowel_count(word: str) -> dict[str, int]:
+    lowercase_word: str = word.lower()
+    return {letter: lowercase_word.count(letter) for letter in lowercase_word if letter in "aeiou"}
