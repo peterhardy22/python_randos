@@ -37,6 +37,7 @@ sum_pairs([11,20,4,2,1,5], 100) # []
 '''
         
 def sum_pairs(numbers_list: list, number: int) -> list:
+    """Returns a list of the first numbers that sum together to make the input number."""
     already_visited: set = set()
     for additive in numbers_list:
         difference: int = number - additive
@@ -53,6 +54,7 @@ vowel_count('Colt') # {'o': 1}
 '''
 
 def vowel_count(word: str) -> dict[str, int]:
+    """Counts the occurence of vowels in a word."""
     lowercase_word: str = word.lower()
     return {letter: lowercase_word.count(letter) for letter in lowercase_word if letter in "aeiou"}
 
@@ -63,6 +65,20 @@ titleize('oNLy cAPITALIZe fIRSt') # "ONLy CAPITALIZe FIRSt"
 '''
 
 def titleize(sentence: str) -> str:
+    """Capitalizes the first letter of every word in a sentence."""
     words_list: list = sentence.split(' ')
     answer_list: list = [word[0].upper() + word[1:] for word in words_list]
     return ' '.join(answer_list)
+
+
+'''
+find_factors(10) # [1,2,5,10 ]
+find_factors(11) # [1,11]
+find_factors(111) # [1,3,37,111 ]
+find_factors(321421) # [1,293,1097,321421 ]
+find_factors(412146) # [1,2,3,6,7,9,14,18,21,42,63,126,3271,6542,9813,19626,22897,29439,45794,58878,68691,137382,206073,412146]
+'''
+
+def find_factors(number: int) -> list[int]:
+    """Returns a list of factors for a given number."""
+    return [factor for factor in range(1, number + 1) if number % factor == 0]
