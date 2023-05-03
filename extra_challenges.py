@@ -55,3 +55,14 @@ vowel_count('Colt') # {'o': 1}
 def vowel_count(word: str) -> dict[str, int]:
     lowercase_word: str = word.lower()
     return {letter: lowercase_word.count(letter) for letter in lowercase_word if letter in "aeiou"}
+
+
+'''
+titleize('this is awesome') # "This Is Awesome"
+titleize('oNLy cAPITALIZe fIRSt') # "ONLy CAPITALIZe FIRSt"
+'''
+
+def titleize(sentence: str) -> str:
+    words_list: list = sentence.split(' ')
+    answer_list: list = [word[0].upper() + word[1:] for word in words_list]
+    return ' '.join(answer_list)
