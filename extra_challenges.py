@@ -133,3 +133,20 @@ def truncate(sentence: str, number: int) -> str:
         return sentence
     else:
         return f"{sentence[:(number - 3)]}..."
+
+
+'''
+two_list_dictionary(['a', 'b', 'c', 'd'], [1, 2, 3]) # {'a': 1, 'b': 2, 'c': 3, 'd': None}
+two_list_dictionary(['a', 'b', 'c']  , [1, 2, 3, 4]) # {'a': 1, 'b': 2, 'c': 3}
+two_list_dictionary(['x', 'y', 'z']  , [1,2]) # {'x': 1, 'y': 2, 'z': None}
+'''
+
+def two_list_dictionary(keys_list: list, values_list: list) -> dict:
+    """Combines 2 lists into a single dictionary."""
+    answer_dict: dict = {}
+    for index, _ in enumerate(keys_list):
+        if index < len(values_list):
+            answer_dict[keys_list[index]] = values_list[index]
+        else:
+            answer_dict[keys_list[index]] = None
+    return answer_dict
