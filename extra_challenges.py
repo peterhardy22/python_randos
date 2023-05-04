@@ -93,10 +93,20 @@ includes('abcd', 'b') # True
 includes('abcd', 'e') # False
 '''
 
-def includes(collection: dict | list | str, value: int, start: int =None):
+def includes(collection: dict | list | str, value: int, start: int = None) -> bool:
     """Returns boolean depnding on if value is in collection taking into account given starting index."""
     if isinstance(collection, dict):
         return value in collection.values()
     if start is None:
         return value in collection
     return value in collection[start:]
+
+
+'''
+repeat('*', 3) # '***' 
+repeat('abc', 2) # 'abcabc' 
+repeat('abc', 0) # ''
+'''
+
+def repeat(pete: int, repete: int) -> int:
+    return pete * repete
