@@ -82,3 +82,21 @@ find_factors(412146) # [1,2,3,6,7,9,14,18,21,42,63,126,3271,6542,9813,19626,2289
 def find_factors(number: int) -> list[int]:
     """Returns a list of factors for a given number."""
     return [factor for factor in range(1, number + 1) if number % factor == 0]
+
+
+'''
+includes([1, 2, 3], 1) # True 
+includes([1, 2, 3], 1, 2) # False 
+includes({ 'a': 1, 'b': 2 }, 1) # True 
+includes({ 'a': 1, 'b': 2 }, 'a') # False
+includes('abcd', 'b') # True
+includes('abcd', 'e') # False
+'''
+
+def includes(collection: dict | list | str, value: int, start: int =None):
+    """Returns boolean depnding on if value is in collection taking into account given starting index."""
+    if isinstance(collection, dict):
+        return value in collection.values()
+    if start is None:
+        return value in collection
+    return value in collection[start:]
