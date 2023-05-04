@@ -110,3 +110,26 @@ repeat('abc', 0) # ''
 
 def repeat(pete: int, repete: int) -> int:
     return pete * repete
+
+
+'''
+truncate("Super cool", 2) # "Truncation must be at least 3 characters."
+truncate("Super cool", 1) # "Truncation must be at least 3 characters."
+truncate("Super cool", 0) # "Truncation must be at least 3 characters."
+truncate("Hello World", 6) # "Hel..."
+truncate("Problem solving is the best!", 10) # "Problem..."
+truncate("Another test", 12) # "Another t..."
+truncate("Woah", 4) # "W..."
+truncate("Woah", 3) # "..."
+truncate("Yo",100) # "Yo"
+truncate("Holy guacamole!", 152) # "Holy guacamole!"
+'''
+
+def truncate(sentence: str, number: int) -> str:
+    """Truncates any given sentence up to the given amount of characters."""
+    if number <= 2:
+        return "Truncation must be at least 3 characters."
+    if number > len(sentence):
+        return sentence
+    else:
+        return f"{sentence[:(number - 3)]}..."
