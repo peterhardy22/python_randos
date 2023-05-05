@@ -178,3 +178,17 @@ same_frequency(1212, 2211) # True
 def same_frequency(number_one: int, number_two: int) -> bool:
     """Returns True if both numbers have the same frequency of digits."""
     return len(str(number_one)) == len(str(number_two))
+
+
+'''
+nth(['a', 'b', 'c', 'd'], 1)  # 'b' 
+nth(['a', 'b', 'c', 'd'], -2) #  'c'
+nth(['a', 'b', 'c', 'd'], 0)  # 'a'
+nth(['a', 'b', 'c', 'd'], -4) #  'a'
+nth(['a', 'b', 'c', 'd'], -1) #  'd'
+nth(['a', 'b', 'c', 'd'], 3)  # 'd'
+'''
+
+def nth(numbers_list: list, number: int) -> int:
+    """Returns the element in the given list at the provided index."""
+    return numbers_list[number]
