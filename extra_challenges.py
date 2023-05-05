@@ -192,3 +192,19 @@ nth(['a', 'b', 'c', 'd'], 3)  # 'd'
 def nth(numbers_list: list, number: int) -> int:
     """Returns the element in the given list at the provided index."""
     return numbers_list[number]
+
+
+'''
+find_the_duplicate([1,2,1,4,3,12]) # 1
+find_the_duplicate([6,1,9,5,3,4,9]) # 9
+find_the_duplicate([2,1,3,4]) # None
+'''
+
+def find_the_duplicate(numbers_list: list) -> int:
+    """Searches for and returns the single duplicate number in the given list."""
+    non_duplicates_list: list = []
+    for number in numbers_list:
+        if number not in non_duplicates_list:
+            non_duplicates_list.append(number)
+        else:
+            return number
