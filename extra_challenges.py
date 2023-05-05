@@ -167,3 +167,14 @@ def range_in_list(numbers_list: list, start: int = 0, end: int = None) -> int:
     if not end:
         end: int = len(numbers_list) - 1
     return sum(numbers_list[start:end+1])
+
+
+'''
+same_frequency(551122,221515) # True
+same_frequency(321142,3212215) # False
+same_frequency(1212, 2211) # True
+'''
+
+def same_frequency(number_one: int, number_two: int) -> bool:
+    """Returns True if both numbers have the same frequency of digits."""
+    return len(str(number_one)) == len(str(number_two))
