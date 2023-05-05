@@ -109,6 +109,7 @@ repeat('abc', 0) # ''
 '''
 
 def repeat(pete: int, repete: int) -> int:
+    """Repeats the first argument repete amount of times."""
     return pete * repete
 
 
@@ -150,3 +151,19 @@ def two_list_dictionary(keys_list: list, values_list: list) -> dict:
         else:
             answer_dict[keys_list[index]] = None
     return answer_dict
+
+
+'''
+range_in_list([1,2,3,4],0,2) #  6
+range_in_list([1,2,3,4],0,3) # 10
+range_in_list([1,2,3,4],1) #  9
+range_in_list([1,2,3,4]) # 10
+range_in_list([1,2,3,4],0,100) # 10
+range_in_list([],0,1) # 0
+'''
+
+def range_in_list(numbers_list: list, start: int = 0, end: int = None) -> int:
+    """Returns the sum of the values  between the start and end indices of the given list."""
+    if not end:
+        end: int = len(numbers_list) - 1
+    return sum(numbers_list[start:end+1])
