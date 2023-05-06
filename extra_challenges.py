@@ -253,9 +253,14 @@ def sum_up_diagonals(numbers_list: list) -> int:
     
     return answer
 
-        
-        
-        
-        
-        
-    
+
+'''
+min_max_key_in_dictionary({2:'a', 7:'b', 1:'c',10:'d',4:'e'}) # [1,10]
+min_max_key_in_dictionary({1: "Elie", 4:"Matt", 2: "Tim"}) # [1,4]
+'''
+
+def min_max_key_in_dictionary(given_dict: dict[int, str]) -> list[int]:
+    """This function takes in a dictionary and returns the lowest and highest key 
+    as a list."""
+    key: list = given_dict.keys()
+    return [min(key), max(key)]       
