@@ -295,3 +295,16 @@ two_oldest_ages( [4,25,3,20,19,5] ) # [20,25]
 def two_oldest_ages(numbers_list: list) -> list:
     """This function takes in a list of ages and returns the two oldest (highest) as a list."""
     return sorted(numbers_list)[-2:]
+
+
+'''
+is_odd_string('a') # True
+is_odd_string('aaaa') # False
+is_odd_string('amazing') # True
+is_odd_string('veryfun') # True
+is_odd_string('veryfunny') # True
+'''
+
+def is_odd_string(word: str) -> bool:
+    """This function returns True if the given word has an odd length."""
+    return len(list(character for character in word)) % 2 == 1
