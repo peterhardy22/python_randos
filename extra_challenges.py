@@ -262,5 +262,25 @@ min_max_key_in_dictionary({1: "Elie", 4:"Matt", 2: "Tim"}) # [1,4]
 def min_max_key_in_dictionary(given_dict: dict[int, str]) -> list[int]:
     """This function takes in a dictionary and returns the lowest and highest key 
     as a list."""
-    key: list = given_dict.keys()
-    return [min(key), max(key)]       
+    keys: list = given_dict.keys()
+    return [min(keys), max(keys)]
+
+
+'''
+find_greater_numbers([1,2,3]) # 3 
+find_greater_numbers([6,1,2,7]) # 4
+find_greater_numbers([5,4,3,2,1]) # 0
+find_greater_numbers([]) # 0
+'''
+
+def find_greater_numbers(numbers_list: list) -> int:
+    """This function accepts a list and returns the number of times a number is 
+    followed by a larger number across the entire list."""
+    counter: int = 0
+    
+    for index, number in enumerate(numbers_list):
+        for item in numbers_list[index:]:
+            if number < item:
+                counter += 1
+    
+    return counter
