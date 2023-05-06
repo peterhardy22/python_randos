@@ -284,3 +284,14 @@ def find_greater_numbers(numbers_list: list) -> int:
                 counter += 1
     
     return counter
+
+
+'''
+two_oldest_ages( [1, 2, 10, 8] ) # [8, 10]
+two_oldest_ages( [6,1,9,10,4] ) # [9,10]
+two_oldest_ages( [4,25,3,20,19,5] ) # [20,25]
+'''
+
+def two_oldest_ages(numbers_list: list) -> list:
+    """This function takes in a list of ages and returns the two oldest (highest) as a list."""
+    return sorted(numbers_list)[-2:]
