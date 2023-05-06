@@ -208,3 +208,54 @@ def find_the_duplicate(numbers_list: list) -> int:
             non_duplicates_list.append(number)
         else:
             return number
+
+
+'''
+EXAMPLES:
+
+list1 = [
+  [ 1, 2 ],
+  [ 3, 4 ]
+]
+sum_up_diagonals(list1) # 10
+
+list2 = [
+  [ 1, 2, 3 ],
+  [ 4, 5, 6 ],
+  [ 7, 8, 9 ]
+]
+sum_up_diagonals(list2) # 30
+ 
+list3 = [
+  [ 4, 1, 0 ],
+  [ -1, -1, 0],
+  [ 0, 0, 9]
+]
+sum_up_diagonals(list3) # 11
+
+list4 = [
+  [ 1, 2, 3, 4 ],
+  [ 5, 6, 7, 8 ],
+  [ 9, 10, 11, 12 ],
+  [ 13, 14, 15, 16 ]
+]
+4 = ([0][0] + [1][1] + [2][2] + [3][3]) + ([0][3] + [1][2] + [2][1] + [3][0])
+sum_up_diagonals(list4) # 68
+'''
+
+def sum_up_diagonals(numbers_list: list) -> int:
+    """Returns the sum of the main diagonals in a NxN list of lists of numbers."""
+    answer: int = 0
+    
+    for index, _ in enumerate(numbers_list):
+        answer += numbers_list[index][index]
+        answer += numbers_list[index][len(numbers_list) - index - 1]
+    
+    return answer
+
+        
+        
+        
+        
+        
+    
