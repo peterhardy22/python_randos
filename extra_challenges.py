@@ -308,3 +308,30 @@ is_odd_string('veryfunny') # True
 def is_odd_string(word: str) -> bool:
     """This function returns True if the given word has an odd length."""
     return len(list(character for character in word)) % 2 == 1
+
+
+'''
+valid_parentheses("()") # True 
+valid_parentheses(")(()))") # False 
+valid_parentheses("(") # False 
+valid_parentheses("(())((()())())") # True 
+valid_parentheses('))((') # False
+valid_parentheses('())(') # False
+valid_parentheses('()()()()())()(') # False
+'''
+
+def valid_parentheses(paren_string: str) -> bool:
+    """Takes in a string and determines if there are the correct matching parenthesis."""
+    counter: int = 0
+    iterator: int = 0
+
+    while iterator < len(paren_string):
+        if (paren_string[iterator] == '('):
+            counter += 1
+        if (paren_string[iterator] == ')'):
+            counter -= 1
+        if (counter < 0):
+            return False
+        iterator += 1
+        
+    return counter == 0
