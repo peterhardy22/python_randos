@@ -338,6 +338,31 @@ def valid_parentheses(paren_string: str) -> bool:
 
 
 '''
+reverse_vowels("Hello!") # "Holle!" 
+reverse_vowels("Tomatoes") # "Temotaos" 
+reverse_vowels("Reverse Vowels In A String") # "RivArsI Vewols en e Streng"
+reverse_vowels("aeiou") # "uoiea"
+reverse_vowels("why try, shy fly?") # "why try, shy fly?"
+'''
+    
+def reverse_vowels(word: str):
+    """Symmetrically switches the position of the vowels in a given string."""
+    vowels: str = "aeiou"
+    word_list: list = list(word)
+    first_pos, second_pos = 0, len(word) - 1
+    while first_pos < second_pos:
+        if word_list[first_pos].lower() not in vowels:
+            first_pos += 1
+        elif word_list[second_pos].lower() not in vowels:
+            second_pos -= 1
+        else:
+            word_list[first_pos], word_list[second_pos] = word_list[second_pos], word_list[first_pos]
+            first_pos += 1
+            second_pos -= 1
+    return "".join(word_list)
+
+
+'''
 three_odd_numbers([1,2,3,4,5]) # True
 three_odd_numbers([0,-2,4,1,9,12,4,1,0]) # True
 three_odd_numbers([5,2,1]) # False
