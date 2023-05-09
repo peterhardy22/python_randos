@@ -355,3 +355,12 @@ def three_odd_numbers(numbers_list: list) -> bool:
     return False
 
 
+'''
+mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]) # 4
+'''
+
+def mode(numbers_list: list) -> int:
+    """Returns the number the occurs most frequently in the given list of numbers."""
+    numbers_count_dict: dict = {number: numbers_list.count(number) for number in numbers_list}
+
+    return max(numbers_count_dict, key=numbers_count_dict.get)
