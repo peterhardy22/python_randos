@@ -364,3 +364,23 @@ def mode(numbers_list: list) -> int:
     numbers_count_dict: dict = {number: numbers_list.count(number) for number in numbers_list}
 
     return max(numbers_count_dict, key=numbers_count_dict.get)
+
+
+'''
+counter = letter_counter('Amazing')
+counter('a') # 2
+counter('m') # 1
+
+counter2 = letter_counter('This Is Really Fun!')
+counter2('i') # 2
+counter2('t') # 1 
+'''
+
+def letter_counter(word: str) -> int:
+    """Has the ability to return how many times a given character appears in the given string."""
+    letter_counter.value = word.lower()
+    
+    def word(character: str) -> int:
+        return letter_counter.value.count(character)
+        
+    return word
