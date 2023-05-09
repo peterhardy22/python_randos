@@ -392,6 +392,30 @@ def mode(numbers_list: list) -> int:
 
 
 '''
+rAvg = running_average()
+rAvg(10) # 10.0
+rAvg(11) # 10.5
+rAvg(12) # 11
+
+rAvg2 = running_average()
+rAvg2(1) # 1
+rAvg2(3) # 2
+'''
+
+def running_average() -> float:
+    """Function is able to track and compute average for consecutive function calls."""
+    running_average.collection: int = 0
+    running_average.amount: int = 0
+  
+    def tracker(number: int) -> float:
+        running_average.collection += number
+        running_average.amount += 1
+        return running_average.collection / running_average.amount
+    
+    return tracker
+
+
+'''
 counter = letter_counter('Amazing')
 counter('a') # 2
 counter('m') # 1
