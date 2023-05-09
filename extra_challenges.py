@@ -454,3 +454,23 @@ def once(given_function):
             given_function.state = True
             return given_function(*args)
     return single
+
+
+'''
+primes = next_prime()
+[next(primes) for i in range(25)]
+# [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
+'''
+
+def next_prime():
+    """Returns a generator that will yield an unlimited number of primes, starting from the first prime, i.e. 2."""
+    number: int = 2
+    prime_numbers: set = set()
+    while True:
+        for prime in prime_numbers:
+            if number % prime == 0:
+                break
+        else:
+            prime_numbers.add(number)
+            yield number
+        number += (number % 2) + 1
