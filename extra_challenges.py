@@ -433,3 +433,24 @@ def letter_counter(word: str) -> int:
         return letter_counter.value.count(character)
         
     return word
+
+
+'''
+def add(a,b):
+    return a+b
+
+oneAddition = once(add)
+
+oneAddition(2,2) # 4
+oneAddition(2,2) # None
+oneAddition(12,200) # None
+'''
+
+def once(given_function):
+    """Takes in a function and returns a function that can only be invoked once."""
+    given_function.state: bool = False
+    def single(*args):
+        if not(given_function.state):
+            given_function.state = True
+            return given_function(*args)
+    return single
