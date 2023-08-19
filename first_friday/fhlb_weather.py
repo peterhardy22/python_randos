@@ -5,7 +5,7 @@ from termcolor import colored
 from tabulate import tabulate
 
 # Set up API key and base URL
-api_key = '5c65f5efbe41769f1bbf62c86e8f9b07'
+api_key = 'NEED TO ADD AN API KEY, THEY ARE FREE!!!'
 base_url = 'http://api.openweathermap.org/data/2.5/weather'
 
 # Set up a dictionary of cities and their coordinates
