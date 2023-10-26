@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+travel_app/.DS_Store
+travel_app/API/creds.py
