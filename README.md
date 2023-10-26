@@ -29,5 +29,5 @@ Ender Randos
   - extra_challenges.py
 
 Travel App
-  - coming soon!
+  - In progress
   
