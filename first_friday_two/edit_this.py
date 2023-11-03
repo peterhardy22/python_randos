@@ -9,6 +9,7 @@ from pathlib import Path
 # try:
 #     file_path = Path("test.txt")
 #     if not file_path.exists():
+#         print(file_path.exists())
 #         raise FileNotFoundError
 # except FileNotFoundError:
 #     print("The 'test.txt' file does not exist in the given file path.")
@@ -61,8 +62,8 @@ from pathlib import Path
 #     file = open(file_path)
 #     print(file.read())
 #     print(file.read())
-#     file.seek(0)
-#     print(file.read())
+#     # file.seek(0)
+#     # print(file.read())
 # except FileNotFoundError:
 #     print("The 'test.txt' file does not exist in the given file path.")
 #     exit(1)
@@ -83,6 +84,7 @@ from pathlib import Path
 
 
 """ 4 """
+# ADD A SECOND LINE OF CONTENT TO 'test.txt' FILE
 # readline() reads a file line by line.
 # try:
 #     file_path = Path("test.txt")
@@ -200,9 +202,23 @@ from pathlib import Path
 # Modes for opening files:
 # r - Read a file (no writing)
 # w - Write to a file (overwrites what was previously in the file)
-# a - Appends to a file (existing file content persists)
+# a - Appends to end a file (existing file content persists)
 
 # with open("starter.txt", "w") as file:
-#     file.write("This is a sentence!\n")
+#     file.write("This is a sentence.\n")
 #     file.write("This is our second sentence!!\n")
-#     file.write("This is my sentence!!!")
+#     file.write("This is my sentence!!!\n")
+
+# with open("starter.txt", "a") as file:
+#     file.write("This fourth sentence is the best!!!!\n")
+
+
+# r+ - Read and write to a file (writing based on cursor)
+
+# try:
+#     file_path = Path("starter.txt")
+#     with open(file_path, "r+") as file:
+#         file.write("Five sentences rules!!!!!\n")
+# except FileNotFoundError:
+#     print("The 'starter.txt' file does not exist in the given file path.")
+#     exit(1)
