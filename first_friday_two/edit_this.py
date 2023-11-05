@@ -36,8 +36,8 @@ from pathlib import Path
 #     file = open(file_path)
 #     print(file)
 #     # print(file.read())
-# except FileNotFoundError:
-#     print("The 'test.txt' file does not exist in the given file path.")
+# except Exception as error:
+#     print(error)
 #     exit(1)
 
 
