@@ -28,6 +28,10 @@ Randomly Themed Python Code Chonks
 Ender Randos
   - extra_challenges.py
 
+First Fridays
+  - Python Environments
+  - File I/O
+
 Travel App
   - In progress
   
