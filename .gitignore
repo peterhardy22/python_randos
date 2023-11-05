@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 travel_app/.DS_Store
 travel_app/API/creds.py
+.DS_Store
