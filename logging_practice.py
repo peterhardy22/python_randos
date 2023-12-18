@@ -6,6 +6,7 @@ def main() -> None:
         level=logging.DEBUG,
         format="%(asctime)s %(levelname)s %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
+        filename="basic.log"
     )
 
     logging.debug("This is a debug message.")
