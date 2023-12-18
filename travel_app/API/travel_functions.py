@@ -1,4 +1,4 @@
-from amadeus import Client, ResponseError
+import amadeus 
 import json
 import requests
 from API.config import base_url, token_headers, token_url
@@ -7,7 +7,7 @@ from API.creds import api_key, api_secret
 
 def api_login():
     """This function logs into the API and returns a token."""
-    amadeus = Client(
+    amadeus = amadeus.Client(
         client_id=api_key,
         client_secret=api_secret
     )
@@ -15,7 +15,7 @@ def api_login():
     try:
         response = amadeus.shopping.flight_dates.get(origin='ORD', destination='LAX')
         print(response.data)
-    except ResponseError as error:
+    except amadeus.ResponseError as error:
         print(error)
 
 
