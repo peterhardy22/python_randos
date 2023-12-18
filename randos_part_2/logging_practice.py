@@ -5,8 +5,8 @@ def main() -> None:
     logging.basicConfig(
         level=logging.DEBUG,
         format="%(asctime)s %(levelname)s %(message)s",
-        datefmt="%Y-%m-%d %H:%M:%S",
-        filename="basic.log"
+        datefmt="%m-%d-%Y %H:%M:%S",
+        filename="randos_part_2/basic.log"
     )
 
     logging.debug("This is a debug message.")
@@ -18,3 +18,16 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+    numbers_list: list = [1, 2, 3, 4, 5]
+    for item in numbers_list:
+        if item == 3:
+            logging.critical(item)
+
+        if item % 2 == 0:
+            logging.info(item)
+        
+        if item % 2 != 0 and item != 3:
+            logging.error(item)
+
+    
