@@ -1,6 +1,6 @@
 from typing import List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, field_validator
 
 
 class Variant(BaseModel):
@@ -8,6 +8,11 @@ class Variant(BaseModel):
     sku: str
     available: bool
     price: float
+
+    @field_validator("sku")
+    def sku_length(cls, value):
+        if len(value) != 7:
+            raise ValueError("SKU must be 7 characters long.")
 
 
 class Product(BaseModel):
@@ -22,11 +27,17 @@ item = Product(
     variants=[
         Variant(
             name="Small",
-            sku="ABC123",
+            sku="ABC1234",
             available=True,
             price=24.99
+        ),
+        Variant(
+            name="Medium",
+            sku="ABC1235",
+            available="False",
+            price=25
         )
     ]
 )
 
-print(item.variants[0].name)
+print(item)
