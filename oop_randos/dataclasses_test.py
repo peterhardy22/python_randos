@@ -18,8 +18,11 @@ class Person:
     age: int
     strength: int = 100
 
-    def __post_init__(self):
+    def __post_init__(self) -> None:
         object.__setattr__(self, "sort_index", self.strength)
+        
+    def __str__(self) -> str:
+        return f"{self.name} ({self.age}) is a {self.job}."
 
 person1 = Person("Mickie", "Orchestrator", 4, 95)
 person2 = Person("Josie", "Free Spirit", 3)
