@@ -1,4 +1,5 @@
 """
+Notes from Exercise:
     - order=True - Allows you to be able to compare objects (ex. person1>person2).
         - sort_index: int - Allows you to sort on an int such as age.
         - import field and field(init=False, repr=False) - Make it so it does not need to be initialized nor shown when printed.
@@ -27,7 +28,7 @@ class Person:
 person1 = Person("Mickie", "Orchestrator", 4, 95)
 person2 = Person("Josie", "Free Spirit", 3)
 person3 = Person("Josie", "Free Spirit", 3)
-person4 = Person("Walker", "Plumper", 0)
+person4 = Person("Walker", "Chonker", 0)
 
 print(id(person2))
 print(id(person3))
