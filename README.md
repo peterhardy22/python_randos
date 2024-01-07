@@ -1,14 +1,15 @@
 # python_randos
-## Random Python projects for fun.
+## Random Python projects for exploration and exposure, growth.
 
-### Back to working in main branch.
+### Focusing on OOP.
 
+Projects
   1. Rock, Paper, Scissors
   2. Guessing Game
   3. Deck of Cards
   4. Quote Scraping
 
-Randomly Themed Python Code Chonks
+Randomly Themed Python Code Chonks Part 1
   - dictionaries.py
   - functions.py
   - sets.py
@@ -32,6 +33,10 @@ First Fridays
   - Python Environments
   - File I/O
 
-Travel App
-  - In progress
+Randomly Themed Python Code Chonks Part 2
+  - logging_practice.py
+  - pydantic_practice.py
+
+OOP Randoms
+  - dataclasses_test.py
   
