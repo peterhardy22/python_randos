@@ -1,3 +1,5 @@
+import requests
+
 from dataclasses import dataclass
 from typing import List
 
@@ -23,3 +25,11 @@ class TopSteamGames:
 
     def __post_init__(self):
         self.response = Response(**self.response)
+
+
+if __name__ == "__main__":
+    steam_top_games_url: str = "https://api.steampowered.com/ISteamChartsService/GetGamesByConcurrentPlayers/v1/"
+    steam_response: dict = requests.get(steam_top_games_url).json()
+
+    top_games = TopSteamGames(**steam_response)
+    print(top_games.response.ranks[:1])
