@@ -1,0 +1,607 @@
+{
+    "response": {
+        "last_update": 1704727469,
+        "ranks": [
+            {
+                "rank": 1,
+                "appid": 730,
+                "concurrent_in_game": 979155,
+                "peak_in_game": 1125293
+            },
+            {
+                "rank": 2,
+                "appid": 570,
+                "concurrent_in_game": 631897,
+                "peak_in_game": 710247
+            },
+            {
+                "rank": 3,
+                "appid": 578080,
+                "concurrent_in_game": 406097,
+                "peak_in_game": 536119
+            },
+            {
+                "rank": 4,
+                "appid": 1172470,
+                "concurrent_in_game": 209536,
+                "peak_in_game": 288563
+            },
+            {
+                "rank": 5,
+                "appid": 1203220,
+                "concurrent_in_game": 174421,
+                "peak_in_game": 253046
+            },
+            {
+                "rank": 6,
+                "appid": 271590,
+                "concurrent_in_game": 166187,
+                "peak_in_game": 201361
+            },
+            {
+                "rank": 7,
+                "appid": 1086940,
+                "concurrent_in_game": 158564,
+                "peak_in_game": 297492
+            },
+            {
+                "rank": 8,
+                "appid": 582010,
+                "concurrent_in_game": 127555,
+                "peak_in_game": 147350
+            },
+            {
+                "rank": 9,
+                "appid": 252490,
+                "concurrent_in_game": 123282,
+                "peak_in_game": 159327
+            },
+            {
+                "rank": 10,
+                "appid": 431960,
+                "concurrent_in_game": 110243,
+                "peak_in_game": 119965
+            },
+            {
+                "rank": 11,
+                "appid": 1966720,
+                "concurrent_in_game": 102294,
+                "peak_in_game": 168739
+            },
+            {
+                "rank": 12,
+                "appid": 440,
+                "concurrent_in_game": 82811,
+                "peak_in_game": 159843
+            },
+            {
+                "rank": 13,
+                "appid": 1938090,
+                "concurrent_in_game": 81001,
+                "peak_in_game": 142595
+            },
+            {
+                "rank": 14,
+                "appid": 236390,
+                "concurrent_in_game": 80188,
+                "peak_in_game": 102283
+            },
+            {
+                "rank": 15,
+                "appid": 2073850,
+                "concurrent_in_game": 73735,
+                "peak_in_game": 116194
+            },
+            {
+                "rank": 16,
+                "appid": 1245620,
+                "concurrent_in_game": 71174,
+                "peak_in_game": 89285
+            },
+            {
+                "rank": 17,
+                "appid": 230410,
+                "concurrent_in_game": 69122,
+                "peak_in_game": 78245
+            },
+            {
+                "rank": 18,
+                "appid": 2252570,
+                "concurrent_in_game": 64643,
+                "peak_in_game": 89478
+            },
+            {
+                "rank": 19,
+                "appid": 238960,
+                "concurrent_in_game": 59999,
+                "peak_in_game": 90141
+            },
+            {
+                "rank": 20,
+                "appid": 2195250,
+                "concurrent_in_game": 54534,
+                "peak_in_game": 75377
+            },
+            {
+                "rank": 21,
+                "appid": 289070,
+                "concurrent_in_game": 52324,
+                "peak_in_game": 70617
+            },
+            {
+                "rank": 22,
+                "appid": 1174180,
+                "concurrent_in_game": 51987,
+                "peak_in_game": 67529
+            },
+            {
+                "rank": 23,
+                "appid": 221100,
+                "concurrent_in_game": 50068,
+                "peak_in_game": 73418
+            },
+            {
+                "rank": 24,
+                "appid": 304930,
+                "concurrent_in_game": 49884,
+                "peak_in_game": 60350
+            },
+            {
+                "rank": 25,
+                "appid": 1091500,
+                "concurrent_in_game": 48918,
+                "peak_in_game": 70826
+            },
+            {
+                "rank": 26,
+                "appid": 322330,
+                "concurrent_in_game": 47392,
+                "peak_in_game": 59719
+            },
+            {
+                "rank": 27,
+                "appid": 359550,
+                "concurrent_in_game": 45085,
+                "peak_in_game": 56834
+            },
+            {
+                "rank": 28,
+                "appid": 413150,
+                "concurrent_in_game": 44325,
+                "peak_in_game": 56341
+            },
+            {
+                "rank": 29,
+                "appid": 105600,
+                "concurrent_in_game": 43968,
+                "peak_in_game": 48814
+            },
+            {
+                "rank": 30,
+                "appid": 550,
+                "concurrent_in_game": 41715,
+                "peak_in_game": 47551
+            },
+            {
+                "rank": 31,
+                "appid": 1238810,
+                "concurrent_in_game": 38340,
+                "peak_in_game": 55506
+            },
+            {
+                "rank": 32,
+                "appid": 251570,
+                "concurrent_in_game": 38112,
+                "peak_in_game": 51423
+            },
+            {
+                "rank": 33,
+                "appid": 394360,
+                "concurrent_in_game": 37628,
+                "peak_in_game": 51099
+            },
+            {
+                "rank": 34,
+                "appid": 1085660,
+                "concurrent_in_game": 37506,
+                "peak_in_game": 51119
+            },
+            {
+                "rank": 35,
+                "appid": 227300,
+                "concurrent_in_game": 37340,
+                "peak_in_game": 56904
+            },
+            {
+                "rank": 36,
+                "appid": 1599340,
+                "concurrent_in_game": 35046,
+                "peak_in_game": 46034
+            },
+            {
+                "rank": 37,
+                "appid": 1222670,
+                "concurrent_in_game": 33579,
+                "peak_in_game": 49426
+            },
+            {
+                "rank": 38,
+                "appid": 346110,
+                "concurrent_in_game": 31759,
+                "peak_in_game": 40557
+            },
+            {
+                "rank": 39,
+                "appid": 108600,
+                "concurrent_in_game": 31544,
+                "peak_in_game": 44686
+            },
+            {
+                "rank": 40,
+                "appid": 322170,
+                "concurrent_in_game": 30309,
+                "peak_in_game": 47216
+            },
+            {
+                "rank": 41,
+                "appid": 381210,
+                "concurrent_in_game": 30075,
+                "peak_in_game": 38588
+            },
+            {
+                "rank": 42,
+                "appid": 892970,
+                "concurrent_in_game": 29902,
+                "peak_in_game": 54453
+            },
+            {
+                "rank": 43,
+                "appid": 261550,
+                "concurrent_in_game": 29032,
+                "peak_in_game": 36082
+            },
+            {
+                "rank": 44,
+                "appid": 1281930,
+                "concurrent_in_game": 27272,
+                "peak_in_game": 38249
+            },
+            {
+                "rank": 45,
+                "appid": 1623660,
+                "concurrent_in_game": 26386,
+                "peak_in_game": 26735
+            },
+            {
+                "rank": 46,
+                "appid": 2357570,
+                "concurrent_in_game": 26259,
+                "peak_in_game": 30925
+            },
+            {
+                "rank": 47,
+                "appid": 250900,
+                "concurrent_in_game": 24661,
+                "peak_in_game": 28824
+            },
+            {
+                "rank": 48,
+                "appid": 4000,
+                "concurrent_in_game": 24607,
+                "peak_in_game": 38075
+            },
+            {
+                "rank": 49,
+                "appid": 1248130,
+                "concurrent_in_game": 24600,
+                "peak_in_game": 47351
+            },
+            {
+                "rank": 50,
+                "appid": 1568590,
+                "concurrent_in_game": 24460,
+                "peak_in_game": 29992
+            },
+            {
+                "rank": 51,
+                "appid": 513710,
+                "concurrent_in_game": 24152,
+                "peak_in_game": 28307
+            },
+            {
+                "rank": 52,
+                "appid": 2399830,
+                "concurrent_in_game": 24139,
+                "peak_in_game": 38831
+            },
+            {
+                "rank": 53,
+                "appid": 594650,
+                "concurrent_in_game": 23047,
+                "peak_in_game": 33058
+            },
+            {
+                "rank": 54,
+                "appid": 1446780,
+                "concurrent_in_game": 22630,
+                "peak_in_game": 26638
+            },
+            {
+                "rank": 55,
+                "appid": 438100,
+                "concurrent_in_game": 21980,
+                "peak_in_game": 30832
+            },
+            {
+                "rank": 56,
+                "appid": 582660,
+                "concurrent_in_game": 21844,
+                "peak_in_game": 26563
+            },
+            {
+                "rank": 57,
+                "appid": 218620,
+                "concurrent_in_game": 21468,
+                "peak_in_game": 30035
+            },
+            {
+                "rank": 58,
+                "appid": 739630,
+                "concurrent_in_game": 21082,
+                "peak_in_game": 34691
+            },
+            {
+                "rank": 59,
+                "appid": 294100,
+                "concurrent_in_game": 20715,
+                "peak_in_game": 27401
+            },
+            {
+                "rank": 60,
+                "appid": 1142710,
+                "concurrent_in_game": 20696,
+                "peak_in_game": 29200
+            },
+            {
+                "rank": 61,
+                "appid": 990080,
+                "concurrent_in_game": 19840,
+                "peak_in_game": 37883
+            },
+            {
+                "rank": 62,
+                "appid": 292030,
+                "concurrent_in_game": 19814,
+                "peak_in_game": 27503
+            },
+            {
+                "rank": 63,
+                "appid": 489830,
+                "concurrent_in_game": 19689,
+                "peak_in_game": 32960
+            },
+            {
+                "rank": 64,
+                "appid": 436150,
+                "concurrent_in_game": 19678,
+                "peak_in_game": 19828
+            },
+            {
+                "rank": 65,
+                "appid": 766570,
+                "concurrent_in_game": 19560,
+                "peak_in_game": 22588
+            },
+            {
+                "rank": 66,
+                "appid": 813780,
+                "concurrent_in_game": 18704,
+                "peak_in_game": 27706
+            },
+            {
+                "rank": 67,
+                "appid": 1449850,
+                "concurrent_in_game": 18338,
+                "peak_in_game": 20883
+            },
+            {
+                "rank": 68,
+                "appid": 1063730,
+                "concurrent_in_game": 18199,
+                "peak_in_game": 29188
+            },
+            {
+                "rank": 69,
+                "appid": 1466860,
+                "concurrent_in_game": 17732,
+                "peak_in_game": 23629
+            },
+            {
+                "rank": 70,
+                "appid": 1364780,
+                "concurrent_in_game": 17462,
+                "peak_in_game": 20849
+            },
+            {
+                "rank": 71,
+                "appid": 236850,
+                "concurrent_in_game": 17203,
+                "peak_in_game": 24074
+            },
+            {
+                "rank": 72,
+                "appid": 1329410,
+                "concurrent_in_game": 17201,
+                "peak_in_game": 19565
+            },
+            {
+                "rank": 73,
+                "appid": 1551360,
+                "concurrent_in_game": 16650,
+                "peak_in_game": 23206
+            },
+            {
+                "rank": 74,
+                "appid": 1366540,
+                "concurrent_in_game": 16470,
+                "peak_in_game": 20405
+            },
+            {
+                "rank": 75,
+                "appid": 39210,
+                "concurrent_in_game": 16091,
+                "peak_in_game": 30551
+            },
+            {
+                "rank": 76,
+                "appid": 444200,
+                "concurrent_in_game": 16048,
+                "peak_in_game": 19518
+            },
+            {
+                "rank": 77,
+                "appid": 1920960,
+                "concurrent_in_game": 15797,
+                "peak_in_game": 20454
+            },
+            {
+                "rank": 78,
+                "appid": 1904540,
+                "concurrent_in_game": 15776,
+                "peak_in_game": 20523
+            },
+            {
+                "rank": 79,
+                "appid": 1517290,
+                "concurrent_in_game": 15566,
+                "peak_in_game": 20377
+            },
+            {
+                "rank": 80,
+                "appid": 8930,
+                "concurrent_in_game": 15509,
+                "peak_in_game": 23638
+            },
+            {
+                "rank": 81,
+                "appid": 1454400,
+                "concurrent_in_game": 15398,
+                "peak_in_game": 16856
+            },
+            {
+                "rank": 82,
+                "appid": 629520,
+                "concurrent_in_game": 14999,
+                "peak_in_game": 20259
+            },
+            {
+                "rank": 83,
+                "appid": 377160,
+                "concurrent_in_game": 14776,
+                "peak_in_game": 24814
+            },
+            {
+                "rank": 84,
+                "appid": 1158310,
+                "concurrent_in_game": 14736,
+                "peak_in_game": 20822
+            },
+            {
+                "rank": 85,
+                "appid": 252950,
+                "concurrent_in_game": 14668,
+                "peak_in_game": 34764
+            },
+            {
+                "rank": 86,
+                "appid": 306130,
+                "concurrent_in_game": 14586,
+                "peak_in_game": 21163
+            },
+            {
+                "rank": 87,
+                "appid": 2349820,
+                "concurrent_in_game": 14061,
+                "peak_in_game": 17571
+            },
+            {
+                "rank": 88,
+                "appid": 284160,
+                "concurrent_in_game": 13568,
+                "peak_in_game": 21652
+            },
+            {
+                "rank": 89,
+                "appid": 393380,
+                "concurrent_in_game": 13555,
+                "peak_in_game": 17596
+            },
+            {
+                "rank": 90,
+                "appid": 1928420,
+                "concurrent_in_game": 13476,
+                "peak_in_game": 15039
+            },
+            {
+                "rank": 91,
+                "appid": 646570,
+                "concurrent_in_game": 13267,
+                "peak_in_game": 14556
+            },
+            {
+                "rank": 92,
+                "appid": 548430,
+                "concurrent_in_game": 13169,
+                "peak_in_game": 19041
+            },
+            {
+                "rank": 93,
+                "appid": 1687950,
+                "concurrent_in_game": 13145,
+                "peak_in_game": 15419
+            },
+            {
+                "rank": 94,
+                "appid": 648800,
+                "concurrent_in_game": 12911,
+                "peak_in_game": 17894
+            },
+            {
+                "rank": 95,
+                "appid": 427520,
+                "concurrent_in_game": 12826,
+                "peak_in_game": 22734
+            },
+            {
+                "rank": 96,
+                "appid": 1366800,
+                "concurrent_in_game": 12805,
+                "peak_in_game": 18562
+            },
+            {
+                "rank": 97,
+                "appid": 1868140,
+                "concurrent_in_game": 12768,
+                "peak_in_game": 17059
+            },
+            {
+                "rank": 98,
+                "appid": 10,
+                "concurrent_in_game": 12726,
+                "peak_in_game": 15678
+            },
+            {
+                "rank": 99,
+                "appid": 1818450,
+                "concurrent_in_game": 12651,
+                "peak_in_game": 13794
+            },
+            {
+                "rank": 100,
+                "appid": 291550,
+                "concurrent_in_game": 12574,
+                "peak_in_game": 20127
+            }
+        ]
+    }
+}
