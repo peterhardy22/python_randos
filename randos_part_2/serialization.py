@@ -11,4 +11,15 @@ class Rank:
 
 @dataclass
 class Response:
-    pass
+    last_update: int
+    ranks: List[Rank]
+
+    def __post_init__(self):
+        self.ranks = [Rank(**rank) for rank in self.ranks]
+
+@dataclass
+class TopSteamGames:
+    response: Response
+
+    def __post_init__(self):
+        self.response = Response(**self.response)
