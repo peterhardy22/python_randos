@@ -1,22 +1,26 @@
 import threading
-import time
-import random
+import requests
+from pathlib import Path
 
-def print_names():
-    for name in ("Peter", "Cassie", "Mickie", "Josie", "Walker"):
-        print(name)
-        time.sleep(random.uniform(0.5, 1.5))
+def download_file(url: str, filename: str) -> None:
+    print(f"Downloading content from {url} to {filename}")
+    response: dict = requests.get(url)
+    Path(filename).write_bytes(response.content)
+    print(f"Finished downloading contents to {filename}")
 
-def print_age(min_sleep: float, max_sleep: float):
-    for _ in range(5):
-        print(random.randint(20, 50))
-        time.sleep(random.uniform(min_sleep, max_sleep))
+base_url: str = "https://raw.githubusercontent.com/JacobCallahan/Understanding/master/Python/file_io"
+urls = [
+    f"{base_url}/binary_file",
+    f"{base_url}/files.py",
+    f"{base_url}/names.txt",
+    f"{base_url}/new_file.txt"
+]
 
-t1 = threading.Thread(target=print_names)
-t2 = threading.Thread(target=print_age, args=(0.2, 1))
+threads_list: list = []
+for url in urls:
+    filename: str = f"downloads/{url.split('/')[-1]}"
+    t = threading.Thread(target=download_file, args=(url, filename))
+    t.start()
+    threads_list.append(t)
 
-t1.start()
-t2.start()
-
-t1.join()
-t2.join()
+[t.join() for t in threads_list]
