@@ -1,6 +1,12 @@
 import concurrent.futures
 import requests
 import time
+from pathlib import Path
+import threading
+
+STATUS_REPORT = Path("status_report.txt")
+STATUS_REPORT.write_text("")
+REPORT_LOCK = threading.Lock()
 
 def get_status(url):
     print(f"Getting status of {url}")
@@ -8,6 +14,9 @@ def get_status(url):
     response = requests.get(url)
     total_time = time.monotonic() - start_time
     print(f"Finished getting status of {url} in {total_time:.2f} seconds")
+    with REPORT_LOCK:
+        current_text = STATUS_REPORT.read_text()
+        STATUS_REPORT.write_text(f"{current_text}{url}: {response.status_code}\n")
     return url, response.status_code
 
 urls: list = [
@@ -18,7 +27,7 @@ urls: list = [
     "https://www.linkedin.com"
 ]
 
-with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
     futures: list = []
     for url in urls:
         future = executor.submit(get_status, url)
