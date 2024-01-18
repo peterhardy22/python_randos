@@ -1,26 +1,32 @@
-import threading
+import concurrent.futures
 import requests
-from pathlib import Path
+import time
 
-def download_file(url: str, filename: str) -> None:
-    print(f"Downloading content from {url} to {filename}")
-    response: dict = requests.get(url)
-    Path(filename).write_bytes(response.content)
-    print(f"Finished downloading contents to {filename}")
+def get_status(url):
+    print(f"Getting status of {url}")
+    start_time = time.monotonic()
+    response = requests.get(url)
+    total_time = time.monotonic() - start_time
+    print(f"Finished getting status of {url} in {total_time:.2f} seconds")
+    return url, response.status_code
 
-base_url: str = "https://raw.githubusercontent.com/JacobCallahan/Understanding/master/Python/file_io"
-urls = [
-    f"{base_url}/binary_file",
-    f"{base_url}/files.py",
-    f"{base_url}/names.txt",
-    f"{base_url}/new_file.txt"
+urls: list = [
+    "https://www.google.com",
+    "https://www.facebook.com",
+    "https://www.twitter.com",
+    "https://www.github.com",
+    "https://www.linkedin.com"
 ]
 
-threads_list: list = []
-for url in urls:
-    filename: str = f"downloads/{url.split('/')[-1]}"
-    t = threading.Thread(target=download_file, args=(url, filename))
-    t.start()
-    threads_list.append(t)
-
-[t.join() for t in threads_list]
+with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+    futures: list = []
+    for url in urls:
+        future = executor.submit(get_status, url)
+        futures.append(future)
+    
+    for future in concurrent.futures.as_completed(futures):
+        try:
+            url, status_code = future.result()
+            print(f"Status code for {url} is {status_code}")
+        except Exception as err:
+            print(f"Task failed: {err}")
