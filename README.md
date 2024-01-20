@@ -34,8 +34,11 @@ First Fridays
   - File I/O
 
 Randomly Themed Python Code Chonks Part 2
+  - dataclass_json.py
   - logging_practice.py
+  - multiprocessing_practice.py
   - pydantic_practice.py
+  - threading_practice.py
 
 OOP Randoms
   - dataclasses_test.py
