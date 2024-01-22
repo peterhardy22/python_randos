@@ -1,56 +1,35 @@
 """Using pools for multiprocessing."""
+import concurrent.futures
 import multiprocessing
+import random
 import time
 
 
-def is_prime(number: int) -> bool:
-    """Checks if a number is prime."""
-    if number <= 1:
-        return False
-    elif number <= 3:
-        return True
-    elif number % 2 == 0 or number % 3 == 0:
-        return False
-    
-    integer: int = 5
-    while integer * integer <= number:
-        if number % integer == 0 or number % (integer + 2) == 0:
-            return False
-        integer += 6
-    return True
-
-def find_primes(numbers: list) -> list:
-    """Find all prime numbers in a list."""
-    primes: list = []
-    for number in numbers:
-        if is_prime(number):
-            primes.append(number)
-    return primes
+def compute_task(task_id, queue: int) -> float:
+    """Perform a computationally intensive task."""
+    count_to: int = queue.get()
+    print(f"Starting task {task_id}. Counting up to {count_to:_}...")
+    result: int = 0
+    for integer in range(count_to):
+        result += integer
+    print(f"Finished task {task_id}.")
+    return result
 
 
 if __name__ == "__main__":
-    numbers: list = list(range(100_000_000, 101_000_001))
-    processes: int = 5
+    with multiprocessing.Manager() as manager:
+        queue = manager.Queue()
+        for _ in range(10):
+            queue.put(random.randint(10_000_000, 50_000_000))
+        
+        start_time = time.monotonic()
+        with concurrent.futures.ProcessPoolExecutor() as executor:
+            futures: list = [executor.submit(compute_task, t_id, queue) for t_id in range(10)]
+            print("Submitted all tasks to the process pool.")
+            results: list = []
+            for index, future in enumerate(concurrent.futures.as_completed(futures)):
+                print(f"Processing task {index + 1}/10...")
+                result = future.result()
+                print(f"Got result from task {index + 1}: {result:,}")
     
-    chunk_size: float = len(numbers) // processes
-    chunks: list = [numbers[integer : integer + chunk_size] for integer in range(0, len(numbers), chunk_size)]
-
-    pool = multiprocessing.Pool(processes=processes)
-    start_time = time.monotonic()
-
-    results = pool.map(find_primes, chunks)
-
-    primes: list = []
-    for result in results:
-        primes += result
-
-    pool.close()
-    pool.join()
-
-    end_time = time.monotonic()
-
-    print(
-        f"Found {len(primes):,} prime numbers "
-        f"between {numbers[0]:,} and {numbers[-1]:,} "
-        f"in {(end_time - start_time):.2f} seconds."
-    )
+    print(f"Finished in {(time.monotonic() - start_time):.2f} seconds.")
